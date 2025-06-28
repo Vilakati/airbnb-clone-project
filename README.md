@@ -144,4 +144,3 @@ Continuous Integration (CI) and Continuous Deployment (CD) are essential for aut
 - **Reliability**: Automated tests and deployments ensure that only high-quality, working code is deployed to production.
 - **Consistency**: Docker ensures that the environment is consistent across all stages (dev, test, prod).
 
-
