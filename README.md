@@ -99,3 +99,29 @@ Guests can search for properties by location, price, date, and other filters to 
 Admins can manage users, listings, and resolve issues (optional feature depending on team scope).
 
 
+## API Security
+
+Security is critical in protecting sensitive user data, ensuring secure transactions, and maintaining platform trust. The following measures will be implemented:
+
+### 1. Authentication
+- We will use JWT (JSON Web Tokens) to verify users and ensure that only authenticated users can access protected routes.
+
+### 2. Authorization
+- Role-based access control will be applied to ensure that only hosts can manage listings and only guests can make bookings.
+
+### 3. Input Validation & Sanitization
+- All user inputs will be validated to prevent SQL injection, XSS (Cross-Site Scripting), and other common attacks.
+
+### 4. HTTPS Encryption
+- All API communication will be secured over HTTPS to protect data in transit.
+
+### 5. Rate Limiting
+- To prevent brute-force and DoS attacks, rate limiting will restrict the number of API calls from a single user or IP.
+
+### Why This Matters
+- **Authentication** ensures only registered users can use the platform.
+- **Authorization** prevents misuse of features by users with the wrong permissions.
+- **Input Validation** protects the system from malicious data.
+- **HTTPS** ensures sensitive information (like passwords and payment details) remains encrypted.
+- **Rate Limiting** helps maintain server health and protect user accounts.
+
