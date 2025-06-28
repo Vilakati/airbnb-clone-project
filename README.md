@@ -124,4 +124,24 @@ Security is critical in protecting sensitive user data, ensuring secure transact
 - **Input Validation** protects the system from malicious data.
 - **HTTPS** ensures sensitive information (like passwords and payment details) remains encrypted.
 - **Rate Limiting** helps maintain server health and protect user accounts.
+## CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) are essential for automating the process of testing, building, and deploying code. This ensures a faster and more reliable workflow.
+
+### 1. CI (Continuous Integration)
+- **CI** involves automatically running tests and checks when code is committed. This helps catch issues early and improves code quality. For example, GitHub Actions can be used to run unit tests and linting checks on every push to the repository.
+
+### 2. CD (Continuous Deployment)
+- **CD** automates the deployment process, ensuring that new changes are automatically pushed to production once they pass the tests. This can be done using tools like Docker and Heroku or other cloud platforms for seamless deployment.
+
+### Tools for CI/CD:
+- **GitHub Actions**: Used to automate the testing and deployment workflows. It integrates directly with GitHub repositories.
+- **Docker**: Ensures that the application runs consistently across different environments (development, staging, production).
+- **Heroku / Render / Railway** (optional): Cloud platforms used to deploy the application and manage environments.
+
+### Why CI/CD is Important:
+- **Faster Development**: Automation reduces manual work, speeding up the release process.
+- **Reliability**: Automated tests and deployments ensure that only high-quality, working code is deployed to production.
+- **Consistency**: Docker ensures that the environment is consistent across all stages (dev, test, prod).
+
 
