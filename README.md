@@ -23,3 +23,53 @@ This project uses a modern full-stack web development toolkit:
 - **React** (optional): A JavaScript library for building dynamic and reusable frontend components.
 - **Docker**: Used to containerize the application and ensure consistency across development and production environments.
 - **GitHub Actions**: Automates testing, linting, and deployment workflows as part of the CI/CD process.
+
+
+## Database Design
+
+The database will be structured around the following core entities:
+
+### 1. Users
+- `id`: Unique identifier
+- `full_name`: Full name of the user
+- `email`: Email address
+- `password`: Encrypted user password
+- `role`: Either "host" or "guest"
+
+### 2. Properties
+- `id`: Unique identifier
+- `title`: Name or description of the property
+- `location`: Address or city
+- `price_per_night`: Rental cost
+- `host_id`: References the user who owns the property
+
+### 3. Bookings
+- `id`: Unique identifier
+- `user_id`: References the guest who made the booking
+- `property_id`: References the booked property
+- `check_in`: Start date of the stay
+- `check_out`: End date of the stay
+
+### 4. Reviews
+- `id`: Unique identifier
+- `user_id`: Reviewer (guest)
+- `property_id`: Reviewed property
+- `rating`: Score (e.g., 1–5)
+- `comment`: Text review
+
+### 5. Payments
+- `id`: Unique identifier
+- `booking_id`: References the booking
+- `amount`: Total amount paid
+- `payment_date`: Date of payment
+- `method`: Payment method (e.g., credit card, PayPal)
+
+### Entity Relationships
+
+- A **user** can act as a **host** (listing properties) or a **guest** (making bookings).
+- A **host** can have many **properties**.
+- A **guest** can make multiple **bookings**.
+- Each **booking** is for one **property** and made by one **guest**.
+- Each **property** can receive many **reviews** from guests.
+- Each **booking** is linked to one **payment** transaction.
+
